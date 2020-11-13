@@ -8,7 +8,7 @@ entity MuxSelB1 is
 	b : in std_logic_vector(4 downto 0);
 	sel_b : in std_logic; --Indica si la salida sera b o 1
 	salida_muxb : out std_logic_vector(4 downto 0));
-	
+
 end MuxSelB1;
 
 architecture behavioral of MuxSelB1 is
@@ -21,10 +21,10 @@ begin
 		salida_muxb <= b;
 	elsif sel_b = '1' then
 		salida_muxb <= "00001";
-	else 
+	else
 		null;
 	end if;
-	
+
 end process;
 
 end behavioral;

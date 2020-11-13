@@ -31,6 +31,5 @@ begin
 		"0110000" when "1110",
 		"0111000" when "1111",
 		"1111111" when others;
-		
+
 end behavioral;
-		

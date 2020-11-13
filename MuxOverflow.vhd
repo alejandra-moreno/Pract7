@@ -9,16 +9,16 @@ entity MuxOverflow is
 	ov_sr : in std_logic; --Overflow del sumador-restador
 	sel_ov : in std_logic; --Indica si mostrar el overflow
 	ov : out std_logic); --Indica si hay overflow
-	
+
 end MuxOverflow;
 
 architecture behavioral of MuxOverflow is
 begin
 
 	with sel_ov select
-		ov <= 
+		ov <=
 			ov_sr when '0',
 			ov_p when '1',
 			'-' when others;
-	
+
 end behavioral;
