@@ -18,6 +18,7 @@ architecture structural of SumadorRestador5Bits is
 	--Acarreos intermedios
 
 	signal c : std_logic_vector(5 downto 0);
+   signal b_aux : std_logic_vector(4 downto 0);
 
 	component Sumador1Bit
 		port (
@@ -34,14 +35,15 @@ begin
 
 		GenSum : for i in 0 to 4 generate
 
-			i_Sumador1Bit : Sumador1Bit
+         b_aux(i) <= s_r xor b(i);
 
-			port map(
-				a_i => a(i),
-				b_i => (s_r xor b(i)),
-				c_i => c(i),
-				s_i => salida_sr(i),
-				c_i_mas_1 => c(i+1));
+			i_Sumador1Bit : Sumador1Bit
+			   port map(
+   				a_i => a(i),
+   				b_i => b_aux(i),
+   				c_i => c(i),
+   				s_i => salida_sr(i),
+   				c_i_mas_1 => c(i+1));
 		end generate GenSum;
 
 end structural;
