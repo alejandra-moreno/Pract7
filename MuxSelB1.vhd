@@ -14,7 +14,7 @@ end MuxSelB1;
 architecture behavioral of MuxSelB1 is
 begin
 
-process(b)
+process(sel_b, b)
 
 begin
    if sel_b = '0' then
