@@ -39,26 +39,26 @@ SIGNAL d1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL ov : STD_LOGIC;
 SIGNAL sel : STD_LOGIC_VECTOR(2 DOWNTO 0);
 COMPONENT Pract7
-	PORT (
-	a : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-	b : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-	d0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	d1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	ov : OUT STD_LOGIC;
-	sel : IN STD_LOGIC_VECTOR(2 DOWNTO 0)
-	);
+    PORT (
+    a : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+    b : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+    d0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+    d1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+    ov : OUT STD_LOGIC;
+    sel : IN STD_LOGIC_VECTOR(2 DOWNTO 0)
+    );
 END COMPONENT;
 BEGIN
-	i1 : Pract7
-	PORT MAP (
+    i1 : Pract7
+    PORT MAP (
 -- list connections between master ports and signals
-	a => a,
-	b => b,
-	d0 => d0,
-	d1 => d1,
-	ov => ov,
-	sel => sel
-	);
+    a => a,
+    b => b,
+    d0 => d0,
+    d1 => d1,
+    ov => ov,
+    sel => sel
+    );
 init : PROCESS
 -- variable declarations
 BEGIN
